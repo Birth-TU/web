@@ -38,6 +38,8 @@
   <link rel="stylesheet" href="https://fontuni.com/boon/css/boon-all.css">
   <link rel="stylesheet" href="resources/css/firework.css">
   <link rel="stylesheet" href="resources/css/main.css">
+
+  <link rel="manifest" href="resources/misc/manifest.json">
 </head>
 
 <body class="boon-300">
@@ -92,7 +94,17 @@
 
   <script type="text/javascript" src="resources/js/locale.js"></script>
   <script type="text/javascript" src="resources/js/main.js"></script>
-
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/resources/js/sw.js').then(function(registration) {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
 </body>
 
 </html>
