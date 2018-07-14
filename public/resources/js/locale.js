@@ -27,7 +27,7 @@ async function main() {
 
   let locale = '';
   if (getParameterByName('lang') !== null) {
-    locale = getParameterByName('lang');
+    locale = getParameterByName('lang').substring(0, 2);
   } else locale = navigator.language || "en";
 
   const result = JSON.parse(await loadJSON(locale));
