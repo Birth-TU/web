@@ -3,8 +3,15 @@ var EXTRA_FILES = [];
 var CHECKSUM = "v1";
 
 var FILES = [
+  '/',
+  '/?lang=th',
+  '/?lang=en',
+  '/?lang=de',
   'https://fontuni.com/boon/css/boon-all.css',
   '/index.html',
+  '/index.html?lang=th',
+  '/index.html?lang=en',
+  '/index.html?lang=de',
   '/resources/icon/apple-touch-icon-57x57.png',
   '/resources/icon/apple-touch-icon-114x114.png',
   '/resources/icon/apple-touch-icon-72x72.png',
