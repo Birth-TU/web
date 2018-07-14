@@ -19,7 +19,7 @@ if (check - now <= 0) {
 
 var TargetDate = '07/28/' + current_year + ' 10:45:00 UTC+0000'; // MM/DD/YYYY HH:MM:SS (ex: 11/29/2012 23:59:59). Note: Add a Time Zone offset (UTC+HHMM) at the end if you want to use Client Computer's Time.
 
-if (current_date === 28 && current_month === 7) document.querySelector('.pyro').style.opacity = 1;
+if (current_date === 28 && current_month === 7) document.querySelector('.pyro').style.display = '';
 
 
 window.useServerTime = true; // Use website server time (instead of client computer time). Important Note: to use this feature, your web server must support SSI or a server-side script, and you should change the filename extension to one of server-processed extensions, such as: .shtml, .ssi, .php, .asp, .jsp, etc.
