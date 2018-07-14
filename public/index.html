@@ -85,7 +85,7 @@
 
   <iframe src="song.mp3" allow="autoplay"></iframe>
 
-  <h1 class="boon-400">นานแค่ไหน &ldquo;จะวันเกิด&rdquo; ?</h1>
+  <h1 id="title" class="boon-400"></h1>
 
   <div class="pyro">
     <div class="before"></div>
@@ -93,47 +93,46 @@
   </div>
 
   <p>
-    <em class="boon-300i">เขาจะทำตามสัญญา ขอเวลาขับเครื่องบิน ...</em>
+    <em id="subtitle" class="boon-300i"></em>
   </p>
 
   <div id="clockdiv">
 
     <div class="displayyear">
       <span id="count_y" class="years">0</span>
-      <div id="title_y" class="smalltext">ปี</div>
+      <div id="title_y" class="smalltext"></div>
     </div>
     <div>
       <span id="count_n" class="months">0</span>
-      <div id="title_n" class="smalltext">เดือน</div>
+      <div id="title_n" class="smalltext"></div>
     </div>
     <div>
       <span id="count_d" class="days">0</span>
-      <div id="title_d" class="smalltext">วัน</div>
+      <div id="title_d" class="smalltext"></div>
     </div>
     <div>
       <span id="count_h" class="hours">0</span>
-      <div id="title_h" class="smalltext">ชั่วโมง</div>
+      <div id="title_h" class="smalltext"></div>
     </div>
     <div>
       <span id="count_m" class="minutes">0</span>
-      <div id="title_m" class="smalltext">นาที</div>
+      <div id="title_m" class="smalltext"></div>
     </div>
     <div>
       <span id="count_s" class="seconds">0</span>
-      <div id="title_s" class="smalltext">วินาที</div>
+      <div id="title_s" class="smalltext"></div>
     </div>
   </div>
 
-  <p id="current_year">ทรงพระเจริญ
-    <br>
-  </p>
+  <p id="lltk"></p>
+  <p id="current_year"></p>
 
   <p id="credits">
-    <a title="Github Repository" href="https://github.com/sungsit/how-long-is-soon">ซอร์สโค้ด</a>
+    <a title="Github Repository" href="https://github.com/" id="source"></a>
   </p>
 
-  <script type="text/javascript" src="main.js"></script>
-  <script type="text/javascript" src="locale.js"></script>
+  <script async type="text/javascript" src="locale.js"></script>
+  <script defer type="text/javascript" src="main.js"></script>
 
 </body>
 

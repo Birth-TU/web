@@ -22,13 +22,6 @@ var TargetDate = '07/28/' + current_year + ' 10:45:00 UTC+0000'; // MM/DD/YYYY H
 if (current_date === 28 && current_month === 7) document.querySelector('.pyro').style.opacity = 1;
 
 
-var year_section = document.getElementById('current_year')
-
-txt =
-  `เริ่มนับจากปัจจุบันถึงวันที่ 28 กรกฎาคม พ.ศ. ${current_year + 543} เวลา 17:45 น.`
-year_section.appendChild(document.createTextNode(txt))
-
-
 window.useServerTime = true; // Use website server time (instead of client computer time). Important Note: to use this feature, your web server must support SSI or a server-side script, and you should change the filename extension to one of server-processed extensions, such as: .shtml, .ssi, .php, .asp, .jsp, etc.
 window.customFix = -100; // To adjust the delay (in ms).
 
