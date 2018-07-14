@@ -49,11 +49,17 @@ h1 {
 
 #credits {
   width: 50%;
-  margin: 40px auto;
+  margin: 10px auto 0px auto;
   padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid #fff176;
   font-size: 14px;
   line-height: 1.5em;
+}
+
+#language {
+  width: 50%;
+  margin: 0px auto;
+  font-size: 4em;
 }
 
 a {
