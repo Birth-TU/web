@@ -69,7 +69,7 @@
       "sizes":"310x310"
     }
   ],
-  "start_url":"index.html",
+  "start_url":"/",
   "display":"standalone",
   "orientation":"portrait",
   "theme_color":"#f57f17",
