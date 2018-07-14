@@ -27,8 +27,6 @@ async function main() {
 
   let locale = await getParameterByName('lang') || "en";
 
-  console.log(locale);
-
   const result = JSON.parse(await loadJSON(locale));
 
   let current_year = (new Date()).getFullYear();
@@ -45,8 +43,6 @@ async function main() {
   document.getElementById('title').appendChild(document.createTextNode(`${result.TITLE}`));
   document.getElementById('source').appendChild(document.createTextNode(`${result.SOURCE}`));
 
-
-  console.log(result);
 }
 
 main();
