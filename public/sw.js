@@ -37,6 +37,7 @@ var FILES = [
   '/resources/icon/en-US.png',
   '/resources/icon/de-DE.png',
   '/resources/js/locale.js',
+  '/resources/js/darkmode.js',
   '/resources/js/main.js',
   '/resources/locale/th.json',
   '/resources/locale/en.json',
@@ -45,15 +46,15 @@ var FILES = [
 
 var CACHENAME = 'birth-tu-' + CHECKSUM;
 
-self.addEventListener('install', function(event) {
-  event.waitUntil(caches.open(CACHENAME).then(function(cache) {
+self.addEventListener('install', function (event) {
+  event.waitUntil(caches.open(CACHENAME).then(function (cache) {
     return cache.addAll(FILES);
   }));
 });
 
-self.addEventListener('activate', function(event) {
-  return event.waitUntil(caches.keys().then(function(keys) {
-    return Promise.all(keys.map(function(k) {
+self.addEventListener('activate', function (event) {
+  return event.waitUntil(caches.keys().then(function (keys) {
+    return Promise.all(keys.map(function (k) {
       if (k != CACHENAME && k.indexOf('birth-tu-') == 0) {
         return caches.delete(k);
       } else {
@@ -66,11 +67,11 @@ self.addEventListener('activate', function(event) {
 self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
-      .then(response=>response||fetch(event.request))
-      .catch(() => {
-        if(event.request.mode == 'navigate') {
-          return caches.match('/offline.html');
-        }
-      })
+    .then(response => response || fetch(event.request))
+    .catch(() => {
+      if (event.request.mode == 'navigate') {
+        return caches.match('/offline.html');
+      }
+    })
   );
 });

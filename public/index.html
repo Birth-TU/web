@@ -42,50 +42,52 @@
   <link rel="manifest" href="manifest.json">
 </head>
 
-<body class="boon-300">
+<body class="boon-300" id="boon-300">
 
   <video src="resources/misc/song.mp3" autoplay></video>
+  <div id="container">
+    <h1 id="title" class="boon-400"></h1>
 
-  <h1 id="title" class="boon-400"></h1>
+    <div class="pyro">
+      <div class="before"></div>
+      <div class="after"></div>
+    </div>
 
-  <div class="pyro">
-    <div class="before"></div>
-    <div class="after"></div>
+    <p>
+      <em id="subtitle" class="boon-300i"></em>
+    </p>
+
+    <div id="clockdiv">
+      <div>
+        <span id="count_n" class="months">0</span>
+        <div id="title_n" class="smalltext"></div>
+      </div>
+      <div>
+        <span id="count_d" class="days">0</span>
+        <div id="title_d" class="smalltext"></div>
+      </div>
+      <div>
+        <span id="count_h" class="hours">0</span>
+        <div id="title_h" class="smalltext"></div>
+      </div>
+      <div>
+        <span id="count_m" class="minutes">0</span>
+        <div id="title_m" class="smalltext"></div>
+      </div>
+      <div>
+        <span id="count_s" class="seconds">0</span>
+        <div id="title_s" class="smalltext"></div>
+      </div>
+    </div>
+
+    <p id="lltk"></p>
+    <p id="current_year"></p>
+    <a id="darkmode" onclick="darkmode()"></a>
+
+    <p id="credits">
+      <a title="Github Repository" href="https://github.com/rayriffy/birth-tu-web" id="source"></a>
+    </p>
   </div>
-
-  <p>
-    <em id="subtitle" class="boon-300i"></em>
-  </p>
-
-  <div id="clockdiv">
-    <div>
-      <span id="count_n" class="months">0</span>
-      <div id="title_n" class="smalltext"></div>
-    </div>
-    <div>
-      <span id="count_d" class="days">0</span>
-      <div id="title_d" class="smalltext"></div>
-    </div>
-    <div>
-      <span id="count_h" class="hours">0</span>
-      <div id="title_h" class="smalltext"></div>
-    </div>
-    <div>
-      <span id="count_m" class="minutes">0</span>
-      <div id="title_m" class="smalltext"></div>
-    </div>
-    <div>
-      <span id="count_s" class="seconds">0</span>
-      <div id="title_s" class="smalltext"></div>
-    </div>
-  </div>
-
-  <p id="lltk"></p>
-  <p id="current_year"></p>
-
-  <p id="credits">
-    <a title="Github Repository" href="https://github.com/rayriffy/birth-tu-web" id="source"></a>
-  </p>
   <p id="language">
     <a title="Thai Version" href="/?lang=th" id="source">
       <img src="resources/icon/th-TH.png" />
@@ -100,6 +102,7 @@
 
   <script type="text/javascript" src="resources/js/locale.js"></script>
   <script type="text/javascript" src="resources/js/main.js"></script>
+  <script type="text/javascript" src="resources/js/darkmode.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {

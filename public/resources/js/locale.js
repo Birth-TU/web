@@ -45,6 +45,7 @@ async function main() {
   document.getElementById('head').appendChild(document.createTextNode(`${result.TITLE}`));
   document.getElementById('title').appendChild(document.createTextNode(`${result.TITLE}`));
   document.getElementById('source').appendChild(document.createTextNode(`${result.SOURCE}`));
+  document.getElementById('darkmode').appendChild(document.createTextNode(`${result.DARKMODE}`));
 
 }
 
