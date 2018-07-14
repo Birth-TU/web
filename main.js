@@ -17,8 +17,6 @@ if (check - now <= 0) {
   current_year++;
 }
 
-console.log(current_year)
-
 var TargetDate = '07/28/' + current_year + ' 10:45:00 UTC+0000'; // MM/DD/YYYY HH:MM:SS (ex: 11/29/2012 23:59:59). Note: Add a Time Zone offset (UTC+HHMM) at the end if you want to use Client Computer's Time.
 
 if (current_date === 28 && current_month === 7) document.querySelector('.pyro').style.opacity = 1;
