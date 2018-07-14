@@ -66,7 +66,6 @@ function startCount() {
 var table = {
   all: element("clockdiv"),
   count: {
-    y: element("count_y"),
     n: element("count_n"),
     d: element("count_d"),
     h: element("count_h"),
@@ -76,7 +75,6 @@ var table = {
     all: element("count_main")
   },
   title: {
-    y: element("title_y"),
     n: element("title_n"),
     d: element("title_d"),
     h: element("title_h"),
@@ -155,7 +153,6 @@ function calculate(dthen, dnow) {
 
 function CountBack(secs) {
   var Remain = {
-    Y: 0,
     N: 0,
     D: calcage(secs, 86400, 100000),
     H: calcage(secs, 3600, 24),
