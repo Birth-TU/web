@@ -31,7 +31,7 @@ window.countUp = true; // Count up from the target Date after Count down finishe
 var FinishedText = "Time<font color=Cyan>'</font>s Up!"; //You can use HTML here, too.
 
 var interval = 995; //ms (*for advanced users only!)
-var blink = 120; //ms (use 0 to disable blinking)
+var blink = 0; //ms (use 0 to disable blinking)
 
 var pluralSign = ''; // (i.e.: 1 Second, 2 Seconds)
 
@@ -66,7 +66,6 @@ function startCount() {
 var table = {
   all: element("clockdiv"),
   count: {
-    y: element("count_y"),
     n: element("count_n"),
     d: element("count_d"),
     h: element("count_h"),
@@ -76,7 +75,6 @@ var table = {
     all: element("count_main")
   },
   title: {
-    y: element("title_y"),
     n: element("title_n"),
     d: element("title_d"),
     h: element("title_h"),
@@ -155,7 +153,6 @@ function calculate(dthen, dnow) {
 
 function CountBack(secs) {
   var Remain = {
-    Y: 0,
     N: 0,
     D: calcage(secs, 86400, 100000),
     H: calcage(secs, 3600, 24),
