@@ -72,6 +72,6 @@
   "start_url":"/",
   "display":"standalone",
   "orientation":"portrait",
-  "theme_color":"#f57f17",
+  "theme_color":"#006064",
   "background_color":"#ffffff"
 }

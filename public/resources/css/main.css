@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background: #ffeb3b;
+  background: #4dd0e1;
   color: #000;
   font-family: Boon, sans-serif;
   font-weight: 300;
@@ -26,14 +26,14 @@ h1 {
   padding: 10px;
   margin: 4px 2px;
   border-radius: 3px;
-  background: #fdd835;
+  background: #00bcd4;
   display: inline-block;
 }
 
 #clockdiv div>span {
   padding: 8px;
   border-radius: 3px;
-  background: #fff176;
+  background: #b2ebf2;
   display: inline-block;
   font-size: 54px;
   line-height: 1.5em;
@@ -51,7 +51,7 @@ h1 {
   width: 50%;
   margin: 10px auto 0px auto;
   padding-top: 20px;
-  border-top: 1px solid #fff176;
+  border-top: 1px solid #b2ebf2;
   font-size: 14px;
   line-height: 1.5em;
 }
@@ -63,7 +63,7 @@ h1 {
 }
 
 a {
-  color: #9c27b0;
+  color: #1976d2;
   text-decoration: none;
 }
 
