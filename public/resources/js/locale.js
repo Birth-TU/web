@@ -34,19 +34,65 @@ async function main() {
 
   let current_year = (new Date()).getFullYear();
 
-  document.getElementById('subtitle').appendChild(document.createTextNode(`${result.BODY1}`));
-  document.getElementById('lltk').appendChild(document.createTextNode(`${result.LLTK}`));
-  document.getElementById('current_year').appendChild(document.createTextNode(`${result.BODY2}${current_year + 543} ${result.BODY3}`));
-  document.getElementById('title_n').appendChild(document.createTextNode(`${result.MONTH}`));
-  document.getElementById('title_d').appendChild(document.createTextNode(`${result.DAY}`));
-  document.getElementById('title_h').appendChild(document.createTextNode(`${result.HOUR}`));
-  document.getElementById('title_m').appendChild(document.createTextNode(`${result.MINUTE}`));
-  document.getElementById('title_s').appendChild(document.createTextNode(`${result.SECOND}`));
-  document.getElementById('head').appendChild(document.createTextNode(`${result.TITLE}`));
-  document.getElementById('title').appendChild(document.createTextNode(`${result.TITLE}`));
-  document.getElementById('source').appendChild(document.createTextNode(`${result.SOURCE}`));
-  document.getElementById('darkmode').appendChild(document.createTextNode(`${result.DARKMODE}`));
+  let elements = {
+    'subtitle': `${result.BODY1}`,
+    'lltk': `${result.LLTK}`,
+    'current_year': `${result.BODY2}${current_year + 543} ${result.BODY3}`,
+    'title_n': `${result.MONTH}`,
+    'title_d': `${result.DAY}`,
+    'title_h': `${result.HOUR}`,
+    'title_m': `${result.MINUTE}`,
+    'title_s': `${result.SECOND}`,
+    'head': `${result.TITLE}`,
+    'title': `${result.TITLE}`,
+    'source': `${result.SOURCE}`,
+    'darkmode': `${result.DARKMODE}`
+  }
 
+
+  Object.keys(elements).forEach((element) => {
+    document.getElementById(element).innerHTML = elements[element];
+  });
+
+  // document.getElementById('subtitle').appendChild(document.createTextNode(`${result.BODY1}`));
+  // document.getElementById('lltk').appendChild(document.createTextNode(`${result.LLTK}`));
+  // document.getElementById('current_year').appendChild(document.createTextNode(`${result.BODY2}${current_year + 543} ${result.BODY3}`));
+  // document.getElementById('title_n').appendChild(document.createTextNode(`${result.MONTH}`));
+  // document.getElementById('title_d').appendChild(document.createTextNode(`${result.DAY}`));
+  // document.getElementById('title_h').appendChild(document.createTextNode(`${result.HOUR}`));
+  // document.getElementById('title_m').appendChild(document.createTextNode(`${result.MINUTE}`));
+  // document.getElementById('title_s').appendChild(document.createTextNode(`${result.SECOND}`));
+  // document.getElementById('head').appendChild(document.createTextNode(`${result.TITLE}`));
+  // document.getElementById('title').appendChild(document.createTextNode(`${result.TITLE}`));
+  // document.getElementById('source').appendChild(document.createTextNode(`${result.SOURCE}`));
+  // document.getElementById('darkmode').appendChild(document.createTextNode(`${result.DARKMODE}`));
+
+}
+
+async function update(lang) {
+  const result = JSON.parse(await loadJSON(lang));
+
+  let current_year = (new Date()).getFullYear();
+
+  let elements = {
+    'subtitle': `${result.BODY1}`,
+    'lltk': `${result.LLTK}`,
+    'current_year': `${result.BODY2}${current_year + 543} ${result.BODY3}`,
+    'title_n': `${result.MONTH}`,
+    'title_d': `${result.DAY}`,
+    'title_h': `${result.HOUR}`,
+    'title_m': `${result.MINUTE}`,
+    'title_s': `${result.SECOND}`,
+    'head': `${result.TITLE}`,
+    'title': `${result.TITLE}`,
+    'source': `${result.SOURCE}`,
+    'darkmode': `${result.DARKMODE}`
+  }
+
+
+  Object.keys(elements).forEach((element) => {
+    document.getElementById(element).innerHTML = elements[element];
+  });
 }
 
 main();
