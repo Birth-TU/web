@@ -96,5 +96,6 @@ video {
 }
 
 .pyro {
-  display: none;
+  opacity: 0;
+  overflow: hidden;
 }
