@@ -39,6 +39,7 @@ async function main() {
   document.getElementById('title_h').appendChild(document.createTextNode(`${result.HOUR}`));
   document.getElementById('title_m').appendChild(document.createTextNode(`${result.MINUTE}`));
   document.getElementById('title_s').appendChild(document.createTextNode(`${result.SECOND}`));
+  document.getElementById('head').appendChild(document.createTextNode(`${result.TITLE}`));
   document.getElementById('title').appendChild(document.createTextNode(`${result.TITLE}`));
   document.getElementById('source').appendChild(document.createTextNode(`${result.SOURCE}`));
 
