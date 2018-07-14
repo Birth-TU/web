@@ -43,7 +43,7 @@ var FILES = [
   '/resources/locale/de.json'
 ].concat(EXTRA_FILES || []);
 
-var CACHENAME = 'birth-x-' + CHECKSUM;
+var CACHENAME = 'birth-tu-' + CHECKSUM;
 
 self.addEventListener('install', function(event) {
   event.waitUntil(caches.open(CACHENAME).then(function(cache) {
@@ -54,7 +54,7 @@ self.addEventListener('install', function(event) {
 self.addEventListener('activate', function(event) {
   return event.waitUntil(caches.keys().then(function(keys) {
     return Promise.all(keys.map(function(k) {
-      if (k != CACHENAME && k.indexOf('birth-x-') == 0) {
+      if (k != CACHENAME && k.indexOf('birth-tu-') == 0) {
         return caches.delete(k);
       } else {
         return Promise.resolve();
