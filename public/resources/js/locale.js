@@ -25,7 +25,10 @@ const loadJSON = (lang) => new Promise((resolve, reject) => {
 
 async function main() {
 
-  let locale = await getParameterByName('lang') || "en";
+  let locale = '';
+  if (getParameterByName('lang') !== null) {
+    locale = getParameterByName('lang');
+  } else locale = navigator.language || "en";
 
   const result = JSON.parse(await loadJSON(locale));
 
