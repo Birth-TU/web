@@ -31,7 +31,7 @@ window.countUp = true; // Count up from the target Date after Count down finishe
 var FinishedText = "Time<font color=Cyan>'</font>s Up!"; //You can use HTML here, too.
 
 var interval = 995; //ms (*for advanced users only!)
-var blink = 120; //ms (use 0 to disable blinking)
+var blink = 0; //ms (use 0 to disable blinking)
 
 var pluralSign = ''; // (i.e.: 1 Second, 2 Seconds)
 

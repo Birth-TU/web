@@ -34,7 +34,6 @@ async function main() {
   document.getElementById('subtitle').appendChild(document.createTextNode(`${result.BODY1}`));
   document.getElementById('lltk').appendChild(document.createTextNode(`${result.LLTK}`));
   document.getElementById('current_year').appendChild(document.createTextNode(`${result.BODY2}${current_year + 543} ${result.BODY3}`));
-  document.getElementById('title_y').appendChild(document.createTextNode(`${result.YEAR}`));
   document.getElementById('title_n').appendChild(document.createTextNode(`${result.MONTH}`));
   document.getElementById('title_d').appendChild(document.createTextNode(`${result.DAY}`));
   document.getElementById('title_h').appendChild(document.createTextNode(`${result.HOUR}`));
