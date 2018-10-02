@@ -1,9 +1,10 @@
+let player = document.getElementById("player");
 function mute(){
-    player = document.getElementById("player");
     player.muted = !player.muted;
     if(player.muted){
-        document.getElementById("mute").innerText = "Unmute";
+        document.getElementById("mute").id = "unmute";
     }else{
-        document.getElementById("mute").innerText = "Mute";
+        document.getElementById("unmute").id = "mute";
     }
+    update();
 }
