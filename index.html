@@ -49,7 +49,7 @@
 
 <body class="boon-300" id="boon-300">
 
-  <video src="resources/misc/song.mp3" autoplay loop></video>
+  <video id="player" src="resources/misc/song.mp3" autoplay loop></video>
 
   <div class="pyro" id="pyro">
     <div class="before"></div>
@@ -89,6 +89,7 @@
 
     <p id="lltk"></p>
     <p id="current_year"></p>
+    <a id="mute" onclick="mute()">Mute</a>
     <a id="darkmode" onclick="darkmode()"></a>
 
     <p id="credits">
@@ -110,6 +111,7 @@
   <script type="text/javascript" src="resources/js/locale.js"></script>
   <script type="text/javascript" src="resources/js/main.js"></script>
   <script type="text/javascript" src="resources/js/darkmode.js"></script>
+  <script type="text/javascript" src="resources/js/player.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
